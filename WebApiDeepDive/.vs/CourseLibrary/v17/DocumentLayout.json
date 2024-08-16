@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\starter files\\courselibrary.api\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\starter files\\courselibrary.api\\courselibrary.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\courselibrary.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\starter files\\courselibrary.api\\migrations\\courselibrarycontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\migrations\\courselibrarycontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthorsController.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\Controllers\\AuthorsController.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Controllers\\AuthorsController.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\Controllers\\AuthorsController.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Controllers\\AuthorsController.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAowCkAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T19:34:39.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CourseLibrary.API",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\CourseLibrary.API.csproj",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\CourseLibrary.API.csproj",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\CourseLibrary.API.csproj",
+              "RelativeToolTip": "CourseLibrary.API\\CourseLibrary.API.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-15T19:19:48.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CourseLibraryContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\Migrations\\CourseLibraryContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Migrations\\CourseLibraryContextModelSnapshot.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\Migrations\\CourseLibraryContextModelSnapshot.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Migrations\\CourseLibraryContextModelSnapshot.cs",
+              "ViewState": "AQIAAJ8AAAAAAAAAAAAAAKQAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-15T19:19:25.065Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
