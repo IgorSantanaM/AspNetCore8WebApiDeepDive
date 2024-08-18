@@ -40,7 +40,6 @@ internal static class StartupHelperExtensions
                 {
                     context.Response.StatusCode = 500;
                     await context.Response.WriteAsync("An unexpected fault happened. Try again later.");
-                    
                 });
             });
         }
