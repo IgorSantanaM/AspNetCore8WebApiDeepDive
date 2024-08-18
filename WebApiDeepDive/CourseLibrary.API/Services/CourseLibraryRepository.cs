@@ -115,9 +115,9 @@ public class CourseLibraryRepository : ICourseLibraryRepository
             throw new ArgumentNullException(nameof(authorId));
         }
 
-#pragma warning disable CS8603 // Possible null reference return.
+#pragma warning disable CS8603 // Possível retorno de referência nula.
         return await _context.Authors.FirstOrDefaultAsync(a => a.Id == authorId);
-#pragma warning restore CS8603 // Possible null reference return.
+#pragma warning restore CS8603 // Possível retorno de referência nula.
     }
 
    

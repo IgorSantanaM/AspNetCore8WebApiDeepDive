@@ -1465,11 +1465,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\CourseLibrary.API.csproj",
+      "projectUniqueName": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\CourseLibrary.API.csproj",
       "projectName": "CourseLibrary.API",
-      "projectPath": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\CourseLibrary.API.csproj",
+      "projectPath": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\CourseLibrary.API.csproj",
       "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\obj\\",
+      "outputPath": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,17 +1,89 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\",
+  "WorkspaceRootPath": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\starter files\\courselibrary.api\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\controllers\\authorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\starter files\\courselibrary.api\\courselibrary.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\startuphelperextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\startuphelperextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\controllers\\coursescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\dbcontexts\\courselibrarycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\dbcontexts\\courselibrarycontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\helpers\\datetimeoffsetextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\helpers\\datetimeoffsetextensions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\services\\icourselibraryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\services\\icourselibraryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\services\\courselibraryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\services\\courselibraryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\profiles\\courseprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\profiles\\courseprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\profiles\\authorprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\profiles\\authorprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\models\\courseforcreationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\models\\courseforcreationdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\models\\coursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\models\\coursedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\models\\authordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\models\\authordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\entities\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\entities\\author.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\entities\\course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\webapideepdive\\courselibrary.api\\library.db||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\library.db||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\courselibrary.api\\courselibrary.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\courselibrary.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|d:\\users\\usuario\\works\\aspnetcore8webapideepdive\\starter files\\courselibrary.api\\migrations\\courselibrarycontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\courselibrary.api\\migrations\\courselibrarycontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{17055168-5B45-4175-8BE2-08A2C45163E7}|CourseLibrary.API\\CourseLibrary.API.csproj|solutionrelative:courselibrary.api\\migrations\\courselibrarycontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,46 +94,276 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CoursesController.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Controllers\\CoursesController.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Controllers\\CoursesController.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Controllers\\CoursesController.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Controllers\\CoursesController.cs",
+              "ViewState": "AQIAAFsAAAAAAAAAAAAcwDoAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T18:49:50.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Properties\\launchSettings.json*",
+              "RelativeToolTip": "CourseLibrary.API\\Properties\\launchSettings.json*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-18T19:21:50.652Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StartupHelperExtensions.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\StartupHelperExtensions.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\StartupHelperExtensions.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\StartupHelperExtensions.cs*",
+              "RelativeToolTip": "CourseLibrary.API\\StartupHelperExtensions.cs*",
+              "ViewState": "AQIAABQAAAAAAAAAAAAUwCoAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T19:17:40.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "AuthorsController.cs",
-              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\Controllers\\AuthorsController.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Controllers\\AuthorsController.cs",
               "RelativeDocumentMoniker": "CourseLibrary.API\\Controllers\\AuthorsController.cs",
-              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\Controllers\\AuthorsController.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Controllers\\AuthorsController.cs",
               "RelativeToolTip": "CourseLibrary.API\\Controllers\\AuthorsController.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAowCkAAAAjAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAowCkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-15T19:34:39.37Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CourseLibrary.API",
-              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\CourseLibrary.API.csproj",
-              "RelativeDocumentMoniker": "CourseLibrary.API\\CourseLibrary.API.csproj",
-              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\CourseLibrary.API.csproj",
-              "RelativeToolTip": "CourseLibrary.API\\CourseLibrary.API.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-08-15T19:19:48.218Z",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\appsettings.json",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\appsettings.json",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\appsettings.json*",
+              "RelativeToolTip": "CourseLibrary.API\\appsettings.json*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-18T19:21:41.957Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 5,
+              "Title": "CourseLibraryContext.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\DbContexts\\CourseLibraryContext.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\DbContexts\\CourseLibraryContext.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\DbContexts\\CourseLibraryContext.cs",
+              "RelativeToolTip": "CourseLibrary.API\\DbContexts\\CourseLibraryContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T19:20:00.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\appsettings.Development.json",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\appsettings.Development.json",
+              "RelativeToolTip": "CourseLibrary.API\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-18T19:21:46.259Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "DateTimeOffsetExtensions.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Helpers\\DateTimeOffsetExtensions.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Helpers\\DateTimeOffsetExtensions.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Helpers\\DateTimeOffsetExtensions.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Helpers\\DateTimeOffsetExtensions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T19:21:29.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ICourseLibraryRepository.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Services\\ICourseLibraryRepository.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Services\\ICourseLibraryRepository.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Services\\ICourseLibraryRepository.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Services\\ICourseLibraryRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T18:46:09.265Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CourseProfile.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Profiles\\CourseProfile.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Profiles\\CourseProfile.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Profiles\\CourseProfile.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Profiles\\CourseProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T19:21:00.923Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AuthorProfile.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Profiles\\AuthorProfile.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Profiles\\AuthorProfile.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Profiles\\AuthorProfile.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Profiles\\AuthorProfile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T19:20:56.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CourseForCreationDto.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Models\\CourseForCreationDto.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Models\\CourseForCreationDto.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Models\\CourseForCreationDto.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Models\\CourseForCreationDto.cs",
+              "ViewState": "AQIAAAQAAAAAAAAAAAA1wAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T19:20:29.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "CourseDto.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Models\\CourseDto.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Models\\CourseDto.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Models\\CourseDto.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Models\\CourseDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T19:20:28.753Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CourseLibraryRepository.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Services\\CourseLibraryRepository.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Services\\CourseLibraryRepository.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Services\\CourseLibraryRepository.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Services\\CourseLibraryRepository.cs",
+              "ViewState": "AQIAAEAAAAAAAAAAAAAcwCcAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T18:46:34.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AuthorDto.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Models\\AuthorDto.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Models\\AuthorDto.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Models\\AuthorDto.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Models\\AuthorDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T19:20:27.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Course.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Entities\\Course.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Entities\\Course.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Entities\\Course.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Entities\\Course.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T19:20:25.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Author.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Entities\\Author.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Entities\\Author.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Entities\\Author.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Entities\\Author.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAwwAsAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T19:20:22.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "library.db",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\library.db",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\library.db",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\library.db",
+              "RelativeToolTip": "CourseLibrary.API\\library.db",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI8SURBVDhPdVNLT1NBGD3a23gJKaJUwsIEUaMoL2NsGyqxoCYEDRuKi0ZW3WHkL0D8BWqkJsLKQlsX9bGrNhqqRKRutCVp1BhFEiUxVyVx0Ud67/DN3EcvsZ7ck2/uN9/MnDkzswsGYrEY0xgD0zQwippGbabBzPEoORxb5Upl6Nrk5HsxiBeaWFhcZKqqWqxyVmuMx\u002BOsUCiwufn5P3dmI6eMYdhtRLEKh0pRVTlVQZpIkMPtduOs398sSdKSSBBqE5hqKJBovW1B/49Go0ilUihXys0iQZCMKPbMYQ7OrmaRza7C6/PBRxwbC4oe8gGzkYio4bApIPOM9v3oAppa23DpSgiyuw13781ZfRwa1ZqwJuAu86p8Lg//uQA6D7cjt/IKPUcOof/CMNbyearSp6HjEpHjHxMzmSU0NjTgUTKJUCiEJw\u002BT2OtyUT5DKkXJjtPbqYAQGBxEsVhEcHwciUQCl0dHsf5tA1W5CS\u002BWV1AqlcivOlvQZTH09vTi9fJLfF7fgGcggHcfvkBpbEc4HIay/zje5tb\u002Bp0A3kXPi6gSUzR94/CCON3Qaw8da8PzrX4x0HsD3n7/rm1i7BxSJHq8X16em4OnrRvrTL1zscOHpRwVn\u002Brrqmyjugf4JmjjdfQL7lALSz9Locm7hYGuL5ReHTUFNlgAVcVV7ZBlDA/0IjpzHyaMdkOnfXmvzgN9BenGSQ6dTgrMORa1tC9ZzvnnrNm2NjKROvjI/KhGNnFiA2vozZ7gxM01jgW0oG0\u002BFgH6cagAAAABJRU5ErkJggg==",
+              "WhenOpened": "2024-08-18T19:19:52.918Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Program.cs",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\Program.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Program.cs",
+              "RelativeToolTip": "CourseLibrary.API\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-18T19:17:52.335Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CourseLibrary.API",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\CourseLibrary.API.csproj",
+              "RelativeDocumentMoniker": "CourseLibrary.API\\CourseLibrary.API.csproj",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\CourseLibrary.API.csproj",
+              "RelativeToolTip": "CourseLibrary.API\\CourseLibrary.API.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-08-15T19:19:48.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
               "Title": "CourseLibraryContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\Migrations\\CourseLibraryContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Migrations\\CourseLibraryContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "CourseLibrary.API\\Migrations\\CourseLibraryContextModelSnapshot.cs",
-              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\Starter files\\CourseLibrary.API\\Migrations\\CourseLibraryContextModelSnapshot.cs",
+              "ToolTip": "D:\\users\\Usuario\\works\\AspNetCore8WebApiDeepDive\\WebApiDeepDive\\CourseLibrary.API\\Migrations\\CourseLibraryContextModelSnapshot.cs",
               "RelativeToolTip": "CourseLibrary.API\\Migrations\\CourseLibraryContextModelSnapshot.cs",
               "ViewState": "AQIAAJ8AAAAAAAAAAAAAAKQAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-15T19:19:25.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-15T19:19:25.065Z"
             }
           ]
         }
