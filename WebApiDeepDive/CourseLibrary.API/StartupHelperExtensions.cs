@@ -9,6 +9,9 @@ internal static class StartupHelperExtensions
     // Add services to the container
     public static WebApplication ConfigureServices(this WebApplicationBuilder builder)
     {
+
+        // Add xml output header format
+        // and return 406 if the reponse header isnt available
         builder.Services.AddControllers(configure =>
         {
             configure.ReturnHttpNotAcceptable = true;
