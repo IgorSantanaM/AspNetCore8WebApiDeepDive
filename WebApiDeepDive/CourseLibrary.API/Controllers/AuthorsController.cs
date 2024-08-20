@@ -57,6 +57,8 @@ public class AuthorsController : ControllerBase
     {
         var authorEntity = _mapper.Map<Entities.Author>(author);
 
+
+
         _courseLibraryRepository.AddAuthor(authorEntity);
         await _courseLibraryRepository.SaveAsync();
 
