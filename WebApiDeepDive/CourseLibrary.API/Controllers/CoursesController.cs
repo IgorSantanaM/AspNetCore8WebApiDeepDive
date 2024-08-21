@@ -66,10 +66,12 @@ public class CoursesController : ControllerBase
         _courseLibraryRepository.AddCourse(authorId, courseEntity);
         await _courseLibraryRepository.SaveAsync();
 
+        // return created success
         var courseToReturn = _mapper.Map<CourseDto>(courseEntity);
         return CreatedAtRoute("GetCourseForAuthor", 
             new { authorId, courseId = courseToReturn.Id },
             courseToReturn);
+
     }
     [HttpPatch("{courseId}")]
     public async Task<IActionResult> PartiallyUpdateCourseForAuthor(Guid authorId, Guid courseId, JsonPatchDocument<CourseForUpdateDto> patchDocument) 
@@ -110,7 +112,16 @@ public class CoursesController : ControllerBase
 
         if (courseForAuthorFromRepo == null)
         {
-            return NotFound();
+            var courseToAdd = _mapper.Map<Entities.Course>(course);
+            courseToAdd.Id = courseId;
+            _courseLibraryRepository.AddCourse(authorId, courseToAdd);
+            await _courseLibraryRepository.SaveAsync();
+
+            var courseToReturn = _mapper.Map<CourseDto>(courseToAdd);
+            return CreatedAtRoute("GetCourseForAuthor",
+                new { authorId, courseId = courseToReturn.Id },
+                courseToReturn);
+
         }
 
         _mapper.Map(course, courseForAuthorFromRepo);
