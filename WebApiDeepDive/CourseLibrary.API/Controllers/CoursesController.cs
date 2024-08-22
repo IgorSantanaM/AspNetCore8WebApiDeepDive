@@ -84,7 +84,10 @@ public class CoursesController : ControllerBase
 
         if (courseForAuthorFromRepo == null)
         {
-            return NotFound();
+            var courseDto = new CourseForUpdateDto();
+            patchDocument.ApplyTo(courseDto);
+            var courseToAdd = _mapper.Map<Entities.Course>(courseDto);
+            courseToAdd.Id = courseId;
         }
         var courseToPatch = _mapper.Map<CourseForUpdateDto>(courseForAuthorFromRepo);
         patchDocument.ApplyTo(courseToPatch);
