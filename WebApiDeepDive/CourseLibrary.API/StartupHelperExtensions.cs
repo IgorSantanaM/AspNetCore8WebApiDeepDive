@@ -1,5 +1,8 @@
 ﻿using CourseLibrary.API.DbContexts;
 using CourseLibrary.API.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
 
@@ -20,7 +23,32 @@ internal static class StartupHelperExtensions
         .AddNewtonsoftJson(setupAction =>
         {
             setupAction.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
-        }).AddXmlDataContractSerializerFormatters();
+        }).AddXmlDataContractSerializerFormatters()
+        .ConfigureApiBehaviorOptions(setupAction =>
+        {
+            setupAction.InvalidModelStateResponseFactory = context =>
+            {
+                var problemDetailsFactory = context.HttpContext.RequestServices.GetRequiredService<ProblemDetailsFactory>();
+
+                var validationProblemDetails = problemDetailsFactory
+                .CreateValidationProblemDetails(
+                    context.HttpContext,
+                    context.ModelState);
+
+                validationProblemDetails.Instance = context.HttpContext.Request.Path;
+
+                validationProblemDetails.Type =
+                "https://courselibrary.com/modelvalidationproblem";
+                validationProblemDetails.Status = StatusCodes.Status422UnprocessableEntity;
+                validationProblemDetails.Title = "One or more validation errors occurred.";
+
+                return new UnprocessableEntityObjectResult(
+                    validationProblemDetails)
+                {
+                    ContentTypes = {"application/problem+json"}
+                };
+            };
+        });
         builder.Services.AddScoped<ICourseLibraryRepository, 
             CourseLibraryRepository>();
 
