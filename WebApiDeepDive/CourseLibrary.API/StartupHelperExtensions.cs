@@ -21,7 +21,6 @@ internal static class StartupHelperExtensions
         {
             setupAction.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
         }).AddXmlDataContractSerializerFormatters();
-
         builder.Services.AddScoped<ICourseLibraryRepository, 
             CourseLibraryRepository>();
 
