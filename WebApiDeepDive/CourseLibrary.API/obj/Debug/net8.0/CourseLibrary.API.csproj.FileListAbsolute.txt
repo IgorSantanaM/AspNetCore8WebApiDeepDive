@@ -109,3 +109,7 @@ D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.AP
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\obj\Debug\net8.0\CourseLibrary.API.pdb
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\obj\Debug\net8.0\CourseLibrary.API.genruntimeconfig.cache
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\obj\Debug\net8.0\ref\CourseLibrary.API.dll
+D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
