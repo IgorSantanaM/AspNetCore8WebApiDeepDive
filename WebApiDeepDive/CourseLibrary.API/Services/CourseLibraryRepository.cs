@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CourseLibrary.API.Services;
 
-public class CourseLibraryRepository : ICourseLibraryRepository 
+public class CourseLibraryRepository : ICourseLibraryRepository
 {
     private readonly CourseLibraryContext _context;
 
@@ -147,6 +147,20 @@ public class CourseLibraryRepository : ICourseLibraryRepository
     public async Task<bool> SaveAsync()
     {
         return (await _context.SaveChangesAsync() >= 0);
+    }
+
+    public async Task<IEnumerable<Author>> GetAuthorsAsync(string? mainCategory)
+    {
+        if (string.IsNullOrWhiteSpace(mainCategory))
+        {
+            return await GetAuthorsAsync();
+        }
+
+        mainCategory = mainCategory.Trim();
+
+        return await _context.Authors
+            .Where(a => a.MainCategory == mainCategory)
+            .ToListAsync();
     }
 }
 
