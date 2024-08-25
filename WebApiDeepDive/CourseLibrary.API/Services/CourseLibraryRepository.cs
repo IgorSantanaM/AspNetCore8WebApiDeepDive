@@ -1,5 +1,6 @@
 ﻿using CourseLibrary.API.DbContexts;
-using CourseLibrary.API.Entities; 
+using CourseLibrary.API.Entities;
+using CourseLibrary.API.ResourceParameters;
 using Microsoft.EntityFrameworkCore;
 
 namespace CourseLibrary.API.Services;
@@ -148,19 +149,38 @@ public class CourseLibraryRepository : ICourseLibraryRepository
     {
         return (await _context.SaveChangesAsync() >= 0);
     }
-
-    public async Task<IEnumerable<Author>> GetAuthorsAsync(string? mainCategory)
+    public async Task<IEnumerable<Author>> GetAuthorsAsync(AuthorsResourceParameters authorsResourceParameters)
     {
-        if (string.IsNullOrWhiteSpace(mainCategory))
+        if(authorsResourceParameters == null)
+        {
+            throw new ArgumentException(nameof(authorsResourceParameters));
+        }
+        if (string.IsNullOrWhiteSpace(authorsResourceParameters.mainCategory)
+            && string.IsNullOrWhiteSpace(authorsResourceParameters.searchQuery))
         {
             return await GetAuthorsAsync();
         }
 
-        mainCategory = mainCategory.Trim();
+        var collection = _context.Authors as IQueryable<Author>;
 
-        return await _context.Authors
-            .Where(a => a.MainCategory == mainCategory)
-            .ToListAsync();
+        if (string.IsNullOrWhiteSpace(authorsResourceParameters.mainCategory))
+        {
+#pragma warning disable CS8602 .
+            authorsResourceParameters.mainCategory = authorsResourceParameters.mainCategory.Trim();
+#pragma warning restore CS8602 
+            collection = collection.Where(a => a.MainCategory == authorsResourceParameters.mainCategory);
+        }
+        if (string.IsNullOrWhiteSpace(authorsResourceParameters.searchQuery))
+        {
+#pragma warning disable CS8602 
+            authorsResourceParameters.searchQuery = authorsResourceParameters.searchQuery.Trim();
+#pragma warning restore CS8602 
+
+            collection = collection.Where(a => a.MainCategory.Contains(authorsResourceParameters.searchQuery)
+                || a.FirstName.Contains(authorsResourceParameters.searchQuery)
+                || a.LastName.Contains(authorsResourceParameters.searchQuery));
+        }
+        return await collection.ToListAsync();
     }
 }
 
