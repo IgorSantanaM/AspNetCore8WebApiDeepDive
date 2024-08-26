@@ -1,5 +1,6 @@
 ﻿using CourseLibrary.API.DbContexts;
 using CourseLibrary.API.Entities;
+using CourseLibrary.API.Helpers;
 using CourseLibrary.API.ResourceParameters;
 using Microsoft.EntityFrameworkCore;
 
@@ -149,38 +150,40 @@ public class CourseLibraryRepository : ICourseLibraryRepository
     {
         return (await _context.SaveChangesAsync() >= 0);
     }
-    public async Task<IEnumerable<Author>> GetAuthorsAsync(AuthorsResourceParameters authorsResourceParameters)
+    public async Task<PagedList<Author>> GetAuthorsAsync(AuthorsResourceParameters authorsResourceParameters)
     {
         if(authorsResourceParameters == null)
         {
             throw new ArgumentException(nameof(authorsResourceParameters));
         }
-        if (string.IsNullOrWhiteSpace(authorsResourceParameters.mainCategory)
-            && string.IsNullOrWhiteSpace(authorsResourceParameters.searchQuery))
-        {
-            return await GetAuthorsAsync();
-        }
+        //if (string.IsNullOrWhiteSpace(authorsResourceParameters.MainCategory)
+        //    && string.IsNullOrWhiteSpace(authorsResourceParameters.SearchQuery))
+        //{
+        //    return await GetAuthorsAsync();
+        //}
 
         var collection = _context.Authors as IQueryable<Author>;
 
-        if (string.IsNullOrWhiteSpace(authorsResourceParameters.mainCategory))
+        if (string.IsNullOrWhiteSpace(authorsResourceParameters.MainCategory))
         {
-#pragma warning disable CS8602 .
-            authorsResourceParameters.mainCategory = authorsResourceParameters.mainCategory.Trim();
+#pragma warning disable CS8602
+            authorsResourceParameters.MainCategory = authorsResourceParameters.MainCategory.Trim();
 #pragma warning restore CS8602 
-            collection = collection.Where(a => a.MainCategory == authorsResourceParameters.mainCategory);
+            collection = collection.Where(a => a.MainCategory == authorsResourceParameters.MainCategory);
         }
-        if (string.IsNullOrWhiteSpace(authorsResourceParameters.searchQuery))
+        if (string.IsNullOrWhiteSpace(authorsResourceParameters.MainCategory))
         {
 #pragma warning disable CS8602 
-            authorsResourceParameters.searchQuery = authorsResourceParameters.searchQuery.Trim();
+            authorsResourceParameters.SearchQuery = authorsResourceParameters.SearchQuery.Trim();
 #pragma warning restore CS8602 
 
-            collection = collection.Where(a => a.MainCategory.Contains(authorsResourceParameters.searchQuery)
-                || a.FirstName.Contains(authorsResourceParameters.searchQuery)
-                || a.LastName.Contains(authorsResourceParameters.searchQuery));
+            collection = collection.Where(a => a.MainCategory.Contains(authorsResourceParameters.SearchQuery)
+                || a.FirstName.Contains(authorsResourceParameters.SearchQuery)
+                || a.LastName.Contains(authorsResourceParameters.SearchQuery));
         }
-        return await collection.ToListAsync();
+        return PagedList<Author>.CreateAsync(collection,
+            authorsResourceParameters.PageNumber,
+            authorsResourceParameters.PageSize);
     }
 }
 
