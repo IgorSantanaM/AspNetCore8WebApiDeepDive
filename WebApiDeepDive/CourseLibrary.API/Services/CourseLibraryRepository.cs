@@ -1,6 +1,7 @@
 ﻿using CourseLibrary.API.DbContexts;
 using CourseLibrary.API.Entities;
 using CourseLibrary.API.Helpers;
+using System.Linq.Dynamic;
 using CourseLibrary.API.ResourceParameters;
 using Microsoft.EntityFrameworkCore;
 
@@ -121,7 +122,6 @@ public class CourseLibraryRepository : ICourseLibraryRepository
         return await _context.Authors.FirstOrDefaultAsync(a => a.Id == authorId);
 #pragma warning restore CS8603 // Possível retorno de referência nula.
     }
-
    
     public async Task<IEnumerable<Author>> GetAuthorsAsync()
     {
@@ -152,7 +152,7 @@ public class CourseLibraryRepository : ICourseLibraryRepository
     }
     public async Task<PagedList<Author>> GetAuthorsAsync(AuthorsResourceParameters authorsResourceParameters)
     {
-        if(authorsResourceParameters == null)
+        if (authorsResourceParameters == null)
         {
             throw new ArgumentException(nameof(authorsResourceParameters));
         }
@@ -180,10 +180,24 @@ public class CourseLibraryRepository : ICourseLibraryRepository
             collection = collection.Where(a => a.MainCategory.Contains(authorsResourceParameters.SearchQuery)
                 || a.FirstName.Contains(authorsResourceParameters.SearchQuery)
                 || a.LastName.Contains(authorsResourceParameters.SearchQuery));
+
         }
-        return PagedList<Author>.CreateAsync(collection,
+
+        if (!string.IsNullOrWhiteSpace(authorsResourceParameters.OrderBy))
+        {
+            if(authorsResourceParameters.OrderBy.ToLowerInvariant() == "nome")
+            {
+                collection = collection.OrderBy(a => a.FirstName)
+                .ThenBy(a => a.LastName);
+            }
+        }
+
+        return await PagedList<Author>.CreateAsync(collection,
             authorsResourceParameters.PageNumber,
             authorsResourceParameters.PageSize);
     }
 }
+#if
 
+
+#endif

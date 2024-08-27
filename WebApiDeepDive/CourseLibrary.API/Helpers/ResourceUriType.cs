@@ -1,6 +1,8 @@
 ﻿namespace CourseLibrary.API.Helpers
 {
-    public class ResourceUriType
+    public enum ResourceUriType
     {
+        PreviousPage,
+        NextPage
     }
 }
