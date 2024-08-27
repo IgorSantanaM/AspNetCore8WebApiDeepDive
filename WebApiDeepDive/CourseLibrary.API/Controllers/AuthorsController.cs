@@ -49,6 +49,7 @@ public class AuthorsController : ControllerBase
             nextPageLink
         };
 
+        // self-descriptive constraint - the response body needs to specify hot to execute it
         Response.Headers.Add("X-Pagination",
             JsonSerializer.Serialize(paginarionMetadata));
 
