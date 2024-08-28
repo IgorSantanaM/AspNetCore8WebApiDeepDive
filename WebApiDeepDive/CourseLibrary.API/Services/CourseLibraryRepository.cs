@@ -4,16 +4,19 @@ using CourseLibrary.API.Helpers;
 using System.Linq.Dynamic;
 using CourseLibrary.API.ResourceParameters;
 using Microsoft.EntityFrameworkCore;
+using CourseLibrary.API.Models;
 
 namespace CourseLibrary.API.Services;
 
 public class CourseLibraryRepository : ICourseLibraryRepository
 {
     private readonly CourseLibraryContext _context;
+    private readonly IPropertyMappingService _propertyMappingService;
 
-    public CourseLibraryRepository(CourseLibraryContext context)
+    public CourseLibraryRepository(CourseLibraryContext context, IPropertyMappingService propertyMappingService)
     {
         _context = context ?? throw new ArgumentNullException(nameof(context));
+        _propertyMappingService = propertyMappingService ?? throw new ArgumentNullException(nameof(propertyMappingService));
     }
 
     public void AddCourse(Guid authorId, Course course)
@@ -185,6 +188,13 @@ public class CourseLibraryRepository : ICourseLibraryRepository
 
         if (!string.IsNullOrWhiteSpace(authorsResourceParameters.OrderBy))
         {
+
+            // get property mapping dictionary
+
+            var authorPropertyMappingDictionary = _propertyMappingService.GetPropertyMappping<AuthorDto, Author>();
+
+
+            collection = collection.ApplySort(authorsResourceParameters.OrderBy, authorPropertyMappingDictionary);
             if(authorsResourceParameters.OrderBy.ToLowerInvariant() == "nome")
             {
                 collection = collection.OrderBy(a => a.FirstName)
