@@ -45,7 +45,7 @@ internal static class StartupHelperExtensions
                 return new UnprocessableEntityObjectResult(
                     validationProblemDetails)
                 {
-                    ContentTypes = {"application/problem+json"}
+                    ContentTypes = {"application/problemcd +json"}
                 };
             };
         });

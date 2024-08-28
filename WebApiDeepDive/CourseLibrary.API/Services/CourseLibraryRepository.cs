@@ -197,7 +197,3 @@ public class CourseLibraryRepository : ICourseLibraryRepository
             authorsResourceParameters.PageSize);
     }
 }
-#if
-
-
-#endif
