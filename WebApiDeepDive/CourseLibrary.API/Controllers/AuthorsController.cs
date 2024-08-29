@@ -1,5 +1,6 @@
 ﻿
 using AutoMapper;
+using CourseLibrary.API.Entities;
 using CourseLibrary.API.Helpers;
 using CourseLibrary.API.Models;
 using CourseLibrary.API.ResourceParameters;
@@ -15,21 +16,27 @@ public class AuthorsController : ControllerBase
 {
     private readonly ICourseLibraryRepository _courseLibraryRepository;
     private readonly IMapper _mapper;
+    private readonly IPropertyMappingService _propertyMappingService;
 
     public AuthorsController(
         ICourseLibraryRepository courseLibraryRepository,
-        IMapper mapper)
+        IMapper mapper, IPropertyMappingService propertyMappingService)
     {
         _courseLibraryRepository = courseLibraryRepository ??
             throw new ArgumentNullException(nameof(courseLibraryRepository));
         _mapper = mapper ??
             throw new ArgumentNullException(nameof(mapper));
+        _propertyMappingService = propertyMappingService ??
+            throw new ArgumentNullException(nameof(propertyMappingService));
     }
 
     [HttpGet(Name = "GetAuthors")]
     [HttpHead]
-    public async Task<ActionResult<IEnumerable<AuthorDto>>> GetAuthors([FromQuery] AuthorsResourceParameters authorsResourceParameters)
-    { 
+    public async Task<ActionResult<IEnumerable<AuthorDto>>> GetAuthors(
+        [FromQuery] AuthorsResourceParameters authorsResourceParameters)
+    {
+        if (!_propertyMappingService.ValidMappingExistsFor<AuthorDto, Author>(authorsResourceParameters.OrderBy))
+            return BadRequest();
 
         // get authors from repo
         var authorsFromRepo = await _courseLibraryRepository
@@ -39,7 +46,7 @@ public class AuthorsController : ControllerBase
 
         var nextPageLink = authorsFromRepo.HasNext ? CreateAuthorsResourceUri(authorsResourceParameters, ResourceUriType.NextPage) : null;
 
-        var paginarionMetadata = new
+        var paginationMetadata = new
         {
             totalCount = authorsFromRepo.TotalCount,
             pageSize = authorsFromRepo.PageSize,
@@ -51,7 +58,7 @@ public class AuthorsController : ControllerBase
 
         // self-descriptive constraint - the response body needs to specify hot to execute it
         Response.Headers.Add("X-Pagination",
-            JsonSerializer.Serialize(paginarionMetadata));
+            JsonSerializer.Serialize(paginationMetadata));
 
         // return them
         return Ok(_mapper.Map<IEnumerable<AuthorDto>>(authorsFromRepo));
@@ -61,27 +68,30 @@ public class AuthorsController : ControllerBase
         switch (type)
         {
             case ResourceUriType.PreviousPage:
-                return Url.Link("GetAuthrs",
+                return Url.Link("GetAuthors",
                     new
                     {
+                        OrderBy = authorsResourceParameters.OrderBy,
                         pageNumber = authorsResourceParameters.PageNumber - 1,
                         pageSize = authorsResourceParameters.PageSize,
                         mainCategory = authorsResourceParameters.MainCategory,
                         searchQuery = authorsResourceParameters.SearchQuery
-                    }); 
+                    }) ; 
             case ResourceUriType.NextPage:
-                return Url.Link("GetAuthrs",
+                return Url.Link("GetAuthors",
                 new
                 {
+                    OrderBy = authorsResourceParameters.OrderBy,
                     pageNumber = authorsResourceParameters.PageNumber + 1,
                     pageSize = authorsResourceParameters.PageSize,
                     mainCategory = authorsResourceParameters.MainCategory,
                     searchQuery = authorsResourceParameters.SearchQuery
                 });
             default:
-                return Url.Link("GetAuthrs",
+                return Url.Link("GetAuthors",
                 new
                 {
+                    OrderBy = authorsResourceParameters.OrderBy,
                     pageNumber = authorsResourceParameters.PageNumber,
                     pageSize = authorsResourceParameters.PageSize,
                     mainCategory = authorsResourceParameters.MainCategory,
