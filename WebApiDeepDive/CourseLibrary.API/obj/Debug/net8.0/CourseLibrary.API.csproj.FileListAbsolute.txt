@@ -113,3 +113,5 @@ D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.AP
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
+D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\System.Linq.Dynamic.dll
+D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll

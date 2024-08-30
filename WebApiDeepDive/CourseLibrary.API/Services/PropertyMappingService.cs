@@ -15,7 +15,7 @@ namespace CourseLibrary.API.Services
                 {"Name", new(new[] {"FirstName","LastName"}) },
             };
 
-        private readonly IList<IPropertyMapping> _propertyMappings;
+        private readonly IList<IPropertyMapping > _propertyMappings;
 
         public PropertyMappingService()
         {
