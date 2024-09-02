@@ -6,7 +6,10 @@ using CourseLibrary.API.ResourceParameters;
 using CourseLibrary.API.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.AspNetCore.Mvc.TagHelpers.Cache;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using System.Dynamic;
+using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
 
 namespace CourseLibrary.API.Controllers;
@@ -142,25 +145,72 @@ public class AuthorsController : ControllerBase
             return NotFound();
         }
 
+        // create links
+        var links = CreateLinkForAuthor(authorId, fields);
+
+        var linkedResourceToReturn = _mapper.Map<AuthorDto>(authorFromRepo)
+            .ShapeData(fields) as IDictionary<string, object?>;
+
+        linkedResourceToReturn.Add("links", links);
+
+
         // return author
-        return Ok(_mapper.Map<AuthorDto>(authorFromRepo).ShapeData(fields));
+        return Ok(linkedResourceToReturn); 
     }
+
+    #region HATEOAS
+    private IEnumerable<LinkDto> CreateLinkForAuthor(Guid authorId, string? fields)
+    {
+
+        var links = new List<LinkDto>();
+
+        if (string.IsNullOrWhiteSpace(fields))
+        {
+            links.Add(new(Url.Link("GetAuthor", new { authorId }),
+                "self",
+                "GET"));
+        }
+        else
+        {
+            links.Add(new(Url.Link("GetAuthor", new { authorId }),
+                "self",
+                "GET"));
+        }
+
+        links.Add(
+            new(Url.Link("CreateCourseForAuthor", new { authorId }),
+            "create_course_for_author",
+            "POST"));
+        links.Add(
+            new(Url.Link("GetCoursesForAuthor", new { authorId }),
+            "courses",
+            "GET"));
+
+        return links;
+    }
+    #endregion
 
     [HttpPost]
     public async Task<ActionResult<AuthorDto>> CreateAuthor(AuthorForCreationDto author)
     {
         var authorEntity = _mapper.Map<Entities.Author>(author);
 
-
-
         _courseLibraryRepository.AddAuthor(authorEntity);
         await _courseLibraryRepository.SaveAsync();
 
         var authorToReturn = _mapper.Map<AuthorDto>(authorEntity);
 
+        // create links
+        var links = CreateLinkForAuthor(authorToReturn.Id, null);
+
+        // add 
+        var linkedResourceToReturn = authorToReturn.ShapeData(null)
+            as IDictionary<string, object?>;
+        linkedResourceToReturn.Add("links", links);
+
         return CreatedAtRoute("GetAuthor",
             new { authorId = authorToReturn.Id },
-            authorToReturn);
+            linkedResourceToReturn);
     }
     [HttpOptions]
     public IActionResult GetAuthorsOptions()

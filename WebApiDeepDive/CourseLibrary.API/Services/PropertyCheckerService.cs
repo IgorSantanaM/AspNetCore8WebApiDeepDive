@@ -2,7 +2,7 @@
 
 namespace CourseLibrary.API.Services;
 
-public class PropertyCheckerService : IPropertyCheckerService
+public class PropertyCheckerService : object, IPropertyCheckerService
 {
     public bool TypeHasProperties<T>(string? fields)
     {
