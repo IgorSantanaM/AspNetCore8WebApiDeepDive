@@ -63,6 +63,8 @@ D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.AP
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\AutoMapper.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Humanizer.dll
+D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.Data.Sqlite.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
@@ -70,9 +72,13 @@ D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.AP
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Sqlite.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\SQLitePCLRaw.batteries_v2.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\SQLitePCLRaw.core.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\System.Linq.Dynamic.dll
+D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\runtimes\alpine-x64\native\libe_sqlite3.so
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\runtimes\linux-arm\native\libe_sqlite3.so
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\runtimes\linux-arm64\native\libe_sqlite3.so
@@ -109,9 +115,3 @@ D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.AP
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\obj\Debug\net8.0\CourseLibrary.API.pdb
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\obj\Debug\net8.0\CourseLibrary.API.genruntimeconfig.cache
 D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\obj\Debug\net8.0\ref\CourseLibrary.API.dll
-D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.AspNetCore.JsonPatch.dll
-D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
-D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Newtonsoft.Json.dll
-D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll
-D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\System.Linq.Dynamic.dll
-D:\users\Usuario\works\AspNetCore8WebApiDeepDive\WebApiDeepDive\CourseLibrary.API\bin\Debug\net8.0\System.Linq.Dynamic.Core.dll
