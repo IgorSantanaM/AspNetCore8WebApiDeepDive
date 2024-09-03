@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.TagHelpers.Cache;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using Microsoft.Net.Http.Headers;
 using System.Dynamic;
 using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
@@ -63,18 +64,12 @@ public class AuthorsController : ControllerBase
         var authorsFromRepo = await _courseLibraryRepository
             .GetAuthorsAsync(authorsResourceParameters);
 
-        var previousPageLink = authorsFromRepo.HasPrevious ? CreateAuthorsResourceUri(authorsResourceParameters, ResourceUriType.PreviousPage) : null;
-
-        var nextPageLink = authorsFromRepo.HasNext ? CreateAuthorsResourceUri(authorsResourceParameters, ResourceUriType.NextPage) : null;
-
         var paginationMetadata = new
         {
             totalCount = authorsFromRepo.TotalCount,
             pageSize = authorsFromRepo.PageSize,
             currentPage = authorsFromRepo.CurrentPage,
-            totalPages = authorsFromRepo.TotalPages,
-            previousPageLink,
-            nextPageLink
+            totalPages = authorsFromRepo.TotalPages
         };
 
         // self-descriptive constraint - the response body needs to specify hot to execute it
@@ -82,8 +77,11 @@ public class AuthorsController : ControllerBase
             JsonSerializer.Serialize(paginationMetadata));
 
         // create links
-        var links = CreateLinksForAuthors(authorsResourceParameters);
+        var links = CreateLinksForAuthors(authorsResourceParameters,
+            authorsFromRepo.HasNext,
+            authorsFromRepo.HasPrevious);
 
+        //shape the auuthors
         var shapedAuthors = _mapper.Map<IEnumerable<AuthorDto>>(authorsFromRepo)
             .ShapeData(authorsResourceParameters.Fields);
 
@@ -147,10 +145,11 @@ public class AuthorsController : ControllerBase
     }
     // name = localtion we could say 
     [HttpGet("{authorId}", Name = "GetAuthor")]
-    public async Task<ActionResult> GetAuthor(Guid authorId, string? fields)
+    public async Task<ActionResult> GetAuthor(Guid authorId, string? fields, [FromHeader(Name = "Accept")] string? mediaType) 
     {
-        // throw new Exception("Test exception");
         
+
+        if(!MediaTypeHeaderValue.TryParse(mediaType, out var parsedMediaType))
         // get author from repo
         var authorFromRepo = await _courseLibraryRepository.GetAuthorAsync(authorId);
 
@@ -211,20 +210,33 @@ public class AuthorsController : ControllerBase
         return links;
     }
 
-    private IEnumerable<LinkDto> CreateLinksForAuthors(AuthorsResourceParameters authorsResourceParameters)
+    private IEnumerable<LinkDto> CreateLinksForAuthors(AuthorsResourceParameters authorsResourceParameters, bool hasPrevious, bool hasNext)
     {
         var links = new List<LinkDto>();
 
+        // self
         links.Add(
             new(CreateAuthorsResourceUri(authorsResourceParameters,
             ResourceUriType.CurrentPage),
             "self", "GET"));
+        if (hasNext)
+        {
+            links.Add(new(CreateAuthorsResourceUri(authorsResourceParameters, ResourceUriType.NextPage),
+                "nextPage",
+                "GET"));
+        }
+        if (hasPrevious)
+        {
+            links.Add(new(CreateAuthorsResourceUri(authorsResourceParameters, ResourceUriType.PreviousPage),
+                "previousPage",
+                "GET"));
+        }
 
         return links;
     }
     #endregion
 
-    [HttpPost]
+    [HttpPost (Name = "CreateAuthor")]
     public async Task<ActionResult<AuthorDto>> CreateAuthor(AuthorForCreationDto author)
     {
         var authorEntity = _mapper.Map<Entities.Author>(author);

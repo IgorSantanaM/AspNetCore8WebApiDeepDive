@@ -2,6 +2,7 @@
 using CourseLibrary.API.Services;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Formatters;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json.Serialization;
@@ -50,6 +51,14 @@ internal static class StartupHelperExtensions
             };
         });
 
+        builder.Services.Configure<MvcOptions>(config =>
+        {
+            var newstonsoftJsonOutputFormatters = config.OutputFormatters.OfType<NewtonsoftJsonOutputFormatter>()?.FirstOrDefault();
+            if (newstonsoftJsonOutputFormatters != null)
+            {
+                newstonsoftJsonOutputFormatters.SupportedMediaTypes.Add("application/vnd.marvin.hateoas+json");
+            }
+        });
         builder.Services.AddTransient<IPropertyMappingService,
             PropertyMappingService>();
 
