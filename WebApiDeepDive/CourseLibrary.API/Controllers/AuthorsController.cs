@@ -4,10 +4,12 @@ using CourseLibrary.API.Helpers;
 using CourseLibrary.API.Models;
 using CourseLibrary.API.ResourceParameters;
 using CourseLibrary.API.Services;
+using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.TagHelpers.Cache;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
+using Microsoft.Net.Http.Headers;
 using System.Dynamic;
 using System.Reflection.Metadata.Ecma335;
 using System.Text.Json;
@@ -63,18 +65,12 @@ public class AuthorsController : ControllerBase
         var authorsFromRepo = await _courseLibraryRepository
             .GetAuthorsAsync(authorsResourceParameters);
 
-        var previousPageLink = authorsFromRepo.HasPrevious ? CreateAuthorsResourceUri(authorsResourceParameters, ResourceUriType.PreviousPage) : null;
-
-        var nextPageLink = authorsFromRepo.HasNext ? CreateAuthorsResourceUri(authorsResourceParameters, ResourceUriType.NextPage) : null;
-
         var paginationMetadata = new
         {
             totalCount = authorsFromRepo.TotalCount,
             pageSize = authorsFromRepo.PageSize,
             currentPage = authorsFromRepo.CurrentPage,
-            totalPages = authorsFromRepo.TotalPages,
-            previousPageLink,
-            nextPageLink
+            totalPages = authorsFromRepo.TotalPages
         };
 
         // self-descriptive constraint - the response body needs to specify hot to execute it
@@ -82,8 +78,11 @@ public class AuthorsController : ControllerBase
             JsonSerializer.Serialize(paginationMetadata));
 
         // create links
-        var links = CreateLinksForAuthors(authorsResourceParameters);
+        var links = CreateLinksForAuthors(authorsResourceParameters,
+            authorsFromRepo.HasNext,
+            authorsFromRepo.HasPrevious);
 
+        //shape the auuthors
         var shapedAuthors = _mapper.Map<IEnumerable<AuthorDto>>(authorsFromRepo)
             .ShapeData(authorsResourceParameters.Fields);
 
@@ -145,12 +144,22 @@ public class AuthorsController : ControllerBase
                 });
         }
     }
+    [Produces("application/json",
+               "appliaction/vnd.marvin.hateoas+json",
+               "appliaction/vnd.marvin.author.full+json",
+               "appliaction/vnd.marvin.author.full.hateoas+json",
+               "appliaction/vnd.marvin.author.friendly+json",
+               "appliaction/vnd.marvin.author.friendly.hateoas+json")]
     // name = localtion we could say 
     [HttpGet("{authorId}", Name = "GetAuthor")]
-    public async Task<ActionResult> GetAuthor(Guid authorId, string? fields)
+    public async Task<ActionResult> GetAuthor(Guid authorId, string? fields, [FromHeader(Name = "Accept")] string? mediaType) 
     {
-        // throw new Exception("Test exception");
-        
+
+        if(!MediaTypeHeaderValue.TryParse(mediaType, out var parsedMediaType))
+        {
+            return BadRequest(_problemDetailsFactory.CreateProblemDetails(HttpContext, statusCode: 400,
+                detail: $"Accept header media type value is not a valid media type. {mediaType}"));
+        }
         // get author from repo
         var authorFromRepo = await _courseLibraryRepository.GetAuthorAsync(authorId);
 
@@ -167,17 +176,30 @@ public class AuthorsController : ControllerBase
             return NotFound();
         }
 
-        // create links
-        var links = CreateLinkForAuthor(authorId, fields);
+        var includeLinks = parsedMediaType.SubTypeWithoutSuffix.EndsWith("hateoas", StringComparison.InvariantCultureIgnoreCase);
+        IEnumerable<LinkDto> links = new List<LinkDto>();
 
-        var linkedResourceToReturn = _mapper.Map<AuthorDto>(authorFromRepo)
-            .ShapeData(fields) as IDictionary<string, object?>;
+        if (includeLinks)
+        {
+            links = CreateLinkForAuthor(authorId, fields);
+        }
 
-        linkedResourceToReturn.Add("links", links);
+        var primaryMediaType = includeLinks ?
+            parsedMediaType.SubTypeWithoutSuffix.Substring(0, parsedMediaType.SubTypeWithoutSuffix.Length - 8)
+                : parsedMediaType.SubTypeWithoutSuffix; 
 
+        if(primaryMediaType == "vnd.marvin.author.full")
+        {
+            var friendlyResourceToReturn = _mapper.Map<AuthorFullDto>(authorFromRepo)
+                .ShapeData(fields) as IDictionary<string, object?>;
 
-        // return author
-        return Ok(linkedResourceToReturn); 
+            if (includeLinks)
+            {
+                friendlyResourceToReturn.Add("links", links);
+            }
+            return Ok(friendlyResourceToReturn);
+        }
+        return Ok(_mapper.Map<AuthorDto>(authorFromRepo));
     }
 
     #region HATEOAS
@@ -211,20 +233,56 @@ public class AuthorsController : ControllerBase
         return links;
     }
 
-    private IEnumerable<LinkDto> CreateLinksForAuthors(AuthorsResourceParameters authorsResourceParameters)
+    private IEnumerable<LinkDto> CreateLinksForAuthors(AuthorsResourceParameters authorsResourceParameters, bool hasPrevious, bool hasNext)
     {
         var links = new List<LinkDto>();
 
+        // self
         links.Add(
             new(CreateAuthorsResourceUri(authorsResourceParameters,
             ResourceUriType.CurrentPage),
             "self", "GET"));
+        if (hasNext)
+        {
+            links.Add(new(CreateAuthorsResourceUri(authorsResourceParameters, ResourceUriType.NextPage),
+                "nextPage",
+                "GET"));
+        }
+        if (hasPrevious)
+        {
+            links.Add(new(CreateAuthorsResourceUri(authorsResourceParameters, ResourceUriType.PreviousPage),
+                "previousPage",
+                "GET"));
+        }
 
         return links;
     }
     #endregion
 
-    [HttpPost]
+    [HttpPost(Name = "CreateAuthorWithDateOfDeath")]
+    public async Task<ActionResult<AuthorDto>> CreateAuthorWithDateOfDeath(AuthorForCreationWithDateOfDeathDto author)
+    {
+        var authorEntity = _mapper.Map<Entities.Author>(author);
+
+        _courseLibraryRepository.AddAuthor(authorEntity);
+        await _courseLibraryRepository.SaveAsync();
+
+        var authorToReturn = _mapper.Map<AuthorDto>(authorEntity);
+
+        // create links
+        var links = CreateLinkForAuthor(authorToReturn.Id, null);
+
+        // add 
+        var linkedResourceToReturn = authorToReturn.ShapeData(null)
+            as IDictionary<string, object?>;
+        linkedResourceToReturn.Add("links", links);
+
+        return CreatedAtRoute("GetAuthor",
+            new { authorId = authorToReturn.Id },
+            linkedResourceToReturn);
+    }
+
+    [HttpPost (Name = "CreateAuthor")]
     public async Task<ActionResult<AuthorDto>> CreateAuthor(AuthorForCreationDto author)
     {
         var authorEntity = _mapper.Map<Entities.Author>(author);
