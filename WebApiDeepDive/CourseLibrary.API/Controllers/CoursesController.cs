@@ -10,6 +10,7 @@ namespace CourseLibrary.API.Controllers;
 
 [ApiController]
 [Route("api/authors/{authorId}/courses")]
+[ResponseCache(CacheProfileName = "240SecondsCacheProfile")]
 public class CoursesController : ControllerBase
 {
     private readonly ICourseLibraryRepository _courseLibraryRepository;
@@ -52,8 +53,8 @@ public class CoursesController : ControllerBase
         }
         return Ok(_mapper.Map<CourseDto>(courseForAuthorFromRepo));
     }
-
-
+    //overrides the controller level
+    [ResponseCache(Duration = 120)]
     [HttpPost(Name = "CreateCourseForAuthor")]
     public async Task<ActionResult<CourseDto>> CreateCourseForAuthor(
             Guid authorId, CourseForCreationDto course)
