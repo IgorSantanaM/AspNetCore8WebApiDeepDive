@@ -1,5 +1,6 @@
 ﻿using CourseLibrary.API.DbContexts;
 using CourseLibrary.API.Services;
+using Marvin.Cache.Headers;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Formatters;
@@ -47,7 +48,7 @@ internal static class StartupHelperExtensions
                 return new UnprocessableEntityObjectResult(
                     validationProblemDetails)
                 {
-                    ContentTypes = {"application/problemcd +json"}
+                    ContentTypes = { "application/problemcd +json" }
                 };
             };
         });
@@ -66,7 +67,7 @@ internal static class StartupHelperExtensions
         builder.Services.AddTransient<IPropertyCheckerService,
             PropertyCheckerService>();
 
-        builder.Services.AddScoped<ICourseLibraryRepository, 
+        builder.Services.AddScoped<ICourseLibraryRepository,
             CourseLibraryRepository>();
 
         builder.Services.AddDbContext<CourseLibraryContext>(options =>
@@ -79,6 +80,16 @@ internal static class StartupHelperExtensions
 
         //Cache store setup
         builder.Services.AddResponseCaching();
+
+
+        builder.Services.AddHttpCacheHeaders((expirationModelOptions) =>
+        {
+            expirationModelOptions.MaxAge = 60;
+            expirationModelOptions.CacheLocation = CacheLocation.Private;
+        },
+        (validationModelOptions) => {
+            validationModelOptions.MustRevalidate = true;
+        });
 
         return builder.Build();
     }
@@ -104,6 +115,8 @@ internal static class StartupHelperExtensions
         }
         // Cache store setup
         app.UseResponseCaching();
+
+        app.UseHttpCacheHeaders();
 
         app.UseAuthorization();
 

@@ -125,7 +125,6 @@ public class CourseLibraryRepository : ICourseLibraryRepository
         return await _context.Authors.FirstOrDefaultAsync(a => a.Id == authorId);
 #pragma warning restore CS8603 // Possível retorno de referência nula.
     }
-   
     public async Task<IEnumerable<Author>> GetAuthorsAsync()
     {
         return await _context.Authors.ToListAsync();
