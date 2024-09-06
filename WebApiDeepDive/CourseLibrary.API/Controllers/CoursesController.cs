@@ -41,14 +41,15 @@ public class CoursesController : ControllerBase
     
     [HttpGet("{courseId}", Name = "GetCourseForAuthor")]
     [HttpCacheExpiration(CacheLocation = CacheLocation.Public, MaxAge = 1000)]
-    [HttpCacheValidation]
+    [HttpCacheValidation(MustRevalidate = false)]
+    
     public async Task<ActionResult<CourseDto>> GetCourseForAuthor(Guid authorId, Guid courseId)
     {
         if (!await _courseLibraryRepository.AuthorExistsAsync(authorId))
         {
             return NotFound();
         }
-
+        
         var courseForAuthorFromRepo = await _courseLibraryRepository.GetCourseAsync(authorId, courseId);
 
         if (courseForAuthorFromRepo == null)

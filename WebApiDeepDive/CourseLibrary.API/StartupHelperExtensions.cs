@@ -114,7 +114,7 @@ internal static class StartupHelperExtensions
             });
         }
         // Cache store setup
-        app.UseResponseCaching();
+        // app.UseResponseCaching();
 
         app.UseHttpCacheHeaders();
 
